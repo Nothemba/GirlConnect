@@ -1,11 +1,9 @@
- @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
-	--light-color: #e6e9ff;
-	--success-color: #5cb85c;
-	--error-color: #d9534f;
+  --light-color: #e6e9ff;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 * {
@@ -15,10 +13,13 @@
 }
 
 body {
+  
+  background: url('https://source.unsplash.com/G8rRItjrwkA') no-repeat center center fixed;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
-	margin: 20px;
+	/* background: var(--light-color);  */
+   /* margin: 20px;  */
+  background-size: 100%;
 }
 
 ul {
@@ -30,26 +31,27 @@ a {
 }
 
 .btn {
-	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
-	border: 0;
-	font-size: 17px;
+  cursor: pointer;
+  padding: 7px 20px;
+  background: #fe4164;
+  color: black;
+  border: 0;
+  font-size: 20px;
 } 
 
 /* Chat Page */
 
-.chat-container {
+ .chat-container {
 	max-width: 1100px;
 	background: #fff;
 	margin: 30px auto;
-	overflow: hidden;
+  overflow: hidden;
+  margin-top: 150px;
 }
 
 .chat-header {
 	background: var(--dark-color-a);
-	color: #fff;
+	color: #fe4164;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	padding: 15px;
@@ -65,7 +67,7 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #fff;
+	color: grey;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
@@ -82,19 +84,21 @@ a {
 }
 
 .chat-sidebar ul li {
-	padding: 10px 0;
+  padding: 10px 0;
+  color:  #fe4164;
 }
 
 .chat-messages {
 	padding: 30px;
 	max-height: 500px;
-	overflow-y: scroll;
+  overflow-y: scroll;
+  color:#fe4164;
 }
 
 .chat-messages .message {
 	padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
+	background-color:#cfcfcf;
 	border-radius: 5px;
 }
 
@@ -124,13 +128,17 @@ a {
 	padding: 5px;
 	height: 40px;
 	flex: 1;
-}
+} 
 
 /* Join Page  */
-.join-container {
-	max-width: 500px;
+ .join-container {
+   /* background-color: #fbcce7; */
+  max-width: 500px;
 	margin: 80px auto;
-	color: #fff;
+  color: #fff;
+  padding-top: 50px;
+  margin-top: 200px;
+ 
 }
 
 .join-header {
@@ -156,7 +164,8 @@ a {
 
 .join-main label {
 	display: block;
-	margin-bottom: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .join-main input[type='text'] {
@@ -186,16 +195,18 @@ a {
 	.chat-sidebar {
 		display: none;
 	}
-} 
+}   
 
-/* @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+ /* @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
-
+img{
+  width: 80%
+}
 ::-webkit-input-placeholder {
   color: #56585b;
 }
@@ -423,4 +434,4 @@ input[type="search"] {
   label {
     display: none;
   }
-} */
+}  */

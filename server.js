@@ -20,15 +20,14 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     socket.emit("message", formatMessages(chat, "Welcome to girl connect"));
-    socket.to(user.room)
-      .emit("message", formatMessages(chat, `${user.username} has joined`)
-      
-      );
+    socket
+      .to(user.room)
+      .emit("message", formatMessages(chat, `${user.username} has joined`));
 
-      io.to(user.room).emit('roomUsers', {
-          room: user.room,
-          users: getRoomUsers(user.room)
-      });
+    io.to(user.room).emit("roomUsers", {
+      room: user.room,
+      users: getRoomUsers(user.room),
+    });
   });
 
   socket.on("chatMessage", (msg) => {
@@ -42,12 +41,12 @@ io.on("connection", (socket) => {
     if (user) {
       io.to(user.room).emit(
         "message",
-        formatMessages(chat, `${user.username} left the chat`)
+        formatMessages(chat, `${user.username} left`)
       );
-      io.to(user.room).emit('roomUsers', {
+      io.to(user.room).emit("roomUsers", {
         room: user.room,
-        users: getRoomUsers(user.room)
-    });
+        users: getRoomUsers(user.room),
+      });
     }
   });
 });
